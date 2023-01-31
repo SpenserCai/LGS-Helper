@@ -15,7 +15,9 @@
 </a>
 
 LGS-Helper(Linux Game Script) A game tool under Linux written in Golang, designed to help linux gamers, steamdeck players to solve, localize, unlock and other functions under non-windows platforms.
+
 </div>
+
 # Scripts
 
   |                         Script                                       |                            Detail                         |
