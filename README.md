@@ -3,12 +3,19 @@
  * @Date: 2023-01-30 17:53:03
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-01-31 23:43:42
+ * @LastEditTime: 2023-02-01 00:07:49
  * @Description: file content
 -->
-# LGS-Helper
-LGS-Helper(Linux Game Script) A game tool under Linux written in Golang, designed to help linux gamers, steamdeck players to solve, localize, unlock and other functions under non-windows platforms.
+<div align="center">
 
+# LGS-Helper
+<img src="https://img.shields.io/badge/Go-1.19+-blue" alt="go">
+<a href="https://jq.qq.com/?_wv=1027&k=htcRNUvM">
+    <img src="https://img.shields.io/badge/QQ%E7%BE%A4-246554357-blueviolet?style=flat-square" alt="QQ Chat Group">
+</a>
+
+LGS-Helper(Linux Game Script) A game tool under Linux written in Golang, designed to help linux gamers, steamdeck players to solve, localize, unlock and other functions under non-windows platforms.
+</div>
 # Scripts
 
   |                         Script                                       |                            Detail                         |
