@@ -42,7 +42,12 @@ https://github.com/GloriousEggroll/proton-ge-custom
 直接运行一次The Sim4 并且给小人安好家，然后保存退出
 
 ## 4.解锁DLC
-直接运行./EaUnLockV2
+```bash
+git clone https://github.com/SpenserCai/LGS-Helper.git
+cd LGS-Helper/scripts/EA
+chmod +x EAUnLockV2
+./EAUnLockV2
+```
 
 ## 5.配置wine
 程序运行后会弹出wine配置窗口，在函数库中添加version，并且确保下表显示的是原装先于内建，应用保存
