@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 23:51:56
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-01-31 10:16:12
+ * @LastEditTime: 2023-01-31 22:50:21
  * @Description: file content
 -->
 <div align="center">
@@ -50,7 +50,9 @@ chmod +x EAUnLockV2
 ```
 
 ## 5.配置wine
-程序运行后会弹出wine配置窗口，在函数库中添加version，并且确保下表显示的是原装先于内建，应用保存
+~~程序运行后会弹出wine配置窗口，在函数库中添加version，并且确保下表显示的是原装先于内建，应用保存~~
+
+不再需要进行任何配置，程序会自动配置wine
 
 ## 6.运行The Sims 4
 如果没有购买按钮说明解锁成功

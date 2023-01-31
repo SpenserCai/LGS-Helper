@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 23:51:56
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-01-31 10:15:08
+ * @LastEditTime: 2023-01-31 22:50:43
  * @Description: file content
 -->
 <div align="center">
@@ -49,7 +49,9 @@ chmod +x EAUnLockV2
 ```
 
 ## 5.Config Wine
-After the program runs, the wine configuration window will pop up, add the version in the function library, and make sure that the following table shows that the original version is prior to the built-in, and the application is saved.
+~~After the program runs, the wine configuration window will pop up, add the version in the function library, and make sure that the following table shows that the original version is prior to the built-in, and the application is saved.~~
+
+nothing to do, auto config
 
 ## 6.Run The Sims 4
 If there is no purchase button, the unlock is successful,then exit the game.
