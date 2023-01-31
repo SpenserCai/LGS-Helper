@@ -3,12 +3,13 @@
  * @Date: 2023-01-30 23:51:56
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-01-31 09:37:59
+ * @LastEditTime: 2023-01-31 10:01:54
  * @Description: file content
 -->
 <div align="center">
 
 # EaUnLockV2 (EA DLC UnLocker V2 - Linux)
+<a href="./README_EN.md">English</a>
 <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
 <img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white" />
 <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" /> 
@@ -22,7 +23,7 @@
 </div>
 
 ## 支持情况
-|                         游戏名                       | 状态 |                 已测试系统                                |
+  |                         游戏名                       | 状态 |                 已测试系统                                |
   | :-----------------------------------------------: | :--: | :-----------------------------------------------------: |
   |                    The Sims 4                     |  ✅  |                  Ubuntu 22.04,SteamOS                   |
 
@@ -44,3 +45,6 @@ https://github.com/GloriousEggroll/proton-ge-custom
 
 ## 6.运行The Sims 4
 如果没有购买按钮说明解锁成功
+
+## 7.安装DLC
+从<a href="https://sims.tarac.nl/the-sims-4/the-sims-4-free-downloads/add-pirated-dlcs-to-your-legit-the-sims-4-game/">EA DLC UnLocker V2</a>下载DLC镜像（找到“All DLC’s in 1 iso download”，下载种子文件），将镜像解压或者挂载，把所有EP SP FP GP 开头的文件夹复制到The Sims 4的安装目录下，即可完成安装。
