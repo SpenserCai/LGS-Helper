@@ -3,13 +3,13 @@
  * @Date: 2023-01-30 23:51:56
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-01-31 10:01:54
+ * @LastEditTime: 2023-01-31 10:16:12
  * @Description: file content
 -->
 <div align="center">
 
 # EaUnLockV2 (EA DLC UnLocker V2 - Linux)
-<a href="./README_EN.md">English</a>
+
 <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
 <img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white" />
 <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" /> 
@@ -21,6 +21,10 @@
 <!-- prettier-ignore-end -->
 
 </div>
+
+<p align="center">
+  <a href="./README_EN.md">English</a>
+</p>
 
 ## 支持情况
   |                         游戏名                       | 状态 |                 已测试系统                                |

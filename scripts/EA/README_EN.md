@@ -3,13 +3,12 @@
  * @Date: 2023-01-30 23:51:56
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-01-31 10:11:41
+ * @LastEditTime: 2023-01-31 10:15:08
  * @Description: file content
 -->
 <div align="center">
 
 # EaUnLockV2 (EA DLC UnLocker V2 - Linux)
-<a href="./README_EN.md">English</a>
 <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
 <img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white" />
 <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" /> 
@@ -21,6 +20,10 @@ Developed based on the original <a  href="https://sims.tarac.nl/the-sims-4/the-s
 <!-- prettier-ignore-end -->
 
 </div>
+
+<p align="center">
+  <a href="./README.md">中文</a>
+</p>
 
 ## Support
   |                         Game                       | Status |                 Tested OS                               |
