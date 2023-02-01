@@ -3,7 +3,7 @@
  * @Date: 2023-02-01 10:28:50
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 21:12:07
+ * @LastEditTime: 2023-02-01 22:53:20
  * @Description: file content
 -->
 <div align="center">
@@ -48,3 +48,6 @@ chmod +x ./FLiNGLauncher
 
 ## 3.兼容性
 我测试了怪物猎人崛起和怪物猎人世界，都能正常下载、更新、运行修改器，如果发现有修改器无法正常运行，请提issue。
+
+## 4.特别鸣谢
+  <a href="https://flingtrainer.com/" title="风灵月影"><img src="https://flingtrainer.com/cn/community/data/avatars/l/0/1.jpg?1584477493" width=70px /></a>
