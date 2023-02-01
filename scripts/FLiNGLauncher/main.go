@@ -3,7 +3,7 @@
  * @Date: 2023-02-01 10:23:53
  * @version:
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 18:21:03
+ * @LastEditTime: 2023-02-01 18:47:16
  * @Description: file content
  */
 package main
@@ -429,6 +429,7 @@ func main() {
 		fmt.Println("Please enter the appid parameter")
 		return
 	}
+	// TODO：添加跳过检查更新参数（不存在的修改器将无法自动下载）
 	InitFLiNG()
 	steamApp, err := GetSteamAppsPath(*appid)
 	if err != nil {
