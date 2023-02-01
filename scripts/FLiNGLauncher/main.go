@@ -3,7 +3,7 @@
  * @Date: 2023-02-01 10:23:53
  * @version:
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 18:47:16
+ * @LastEditTime: 2023-02-01 21:34:56
  * @Description: file content
  */
 package main
@@ -15,7 +15,6 @@ import (
 	"flag"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"net/http"
 	"os"
 	"os/exec"
@@ -88,7 +87,7 @@ func InitFLiNG() error {
 func GetGeProtonPath(steamApp SteamApp) (string, error) {
 	steamdataPath := strings.Split(steamApp.PfxPath, "/pfx")[0]
 	// 读取steamdataPath+"/config_info"文件
-	configInfo, err := ioutil.ReadFile(steamdataPath + "/config_info")
+	configInfo, err := os.ReadFile(steamdataPath + "/config_info")
 	if err != nil {
 		return "", err
 	}
@@ -190,7 +189,7 @@ func GetLastestFlingUrl(steamApp SteamApp) (string, error) {
 	}
 	defer resp.Body.Close()
 	// 读取html
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		return "", err
 	}
@@ -213,7 +212,7 @@ func IsInstallLastestFling(steamApp SteamApp, lastestUrl string) (bool, error) {
 	// 从lastestUrl中正则查找最新版风灵月影的版本号（用/分割，取最后一个）
 	flingVerison := strings.Split(lastestUrl, "/")[len(strings.Split(lastestUrl, "/"))-1]
 	// 读取json文件，将内容转换成map
-	jsonData, err := ioutil.ReadFile(flingTrainerConfig)
+	jsonData, err := os.ReadFile(flingTrainerConfig)
 	if err != nil {
 		return false, err
 	}
@@ -343,7 +342,7 @@ func DownOrUpdateFling(steamApp SteamApp, isReDown bool) error {
 		Type:          "steam",
 		Appid:         steamApp.AppId,
 	}
-	jsonData, err := ioutil.ReadFile(flingTrainerConfig)
+	jsonData, err := os.ReadFile(flingTrainerConfig)
 	if err != nil {
 		return err
 	}
@@ -353,13 +352,13 @@ func DownOrUpdateFling(steamApp SteamApp, isReDown bool) error {
 		return err
 	}
 	flingTrainerMap[steamApp.AppId] = flingConfigItem
-	fmt.Println(flingTrainerMap)
+	// fmt.Println(flingTrainerMap)
 	// 格式化json
 	flingTrainerMapJson, err := json.MarshalIndent(flingTrainerMap, "", "    ")
 	if err != nil {
 		return err
 	}
-	err = ioutil.WriteFile(flingTrainerConfig, flingTrainerMapJson, 0644)
+	err = os.WriteFile(flingTrainerConfig, flingTrainerMapJson, 0644)
 	if err != nil {
 		return err
 	}
@@ -370,7 +369,7 @@ func DownOrUpdateFling(steamApp SteamApp, isReDown bool) error {
 // 通过appid读取flingConfigItem
 func GetFlingConfigItemByAppid(appid string) (FlingConfigItem, error) {
 	flingConfigItem := FlingConfigItem{}
-	jsonData, err := ioutil.ReadFile(flingTrainerConfig)
+	jsonData, err := os.ReadFile(flingTrainerConfig)
 	if err != nil {
 		return flingConfigItem, err
 	}
@@ -388,7 +387,7 @@ func GetFlingConfigItemByAppid(appid string) (FlingConfigItem, error) {
 	if err != nil {
 		return flingConfigItem, err
 	}
-	fmt.Println(flingConfigItem)
+	// fmt.Println(flingConfigItem)
 	return flingConfigItem, nil
 }
 
@@ -411,7 +410,11 @@ func RunFling(steamApp SteamApp) error {
 		return err
 	}
 	commandString := fmt.Sprintf("STEAM_COMPAT_CLIENT_INSTALL_PATH=\"%s\" STEAM_COMPAT_DATA_PATH=\"%s\" WINEPREFIX=\"%s\" \"%s\" run \"%s\"", steamInstallPath, steamdataPath, steamApp.PfxPath, protonPath, flingExePath)
-	fmt.Println(commandString)
+	// fmt.Println(commandString)
+	fmt.Printf("Run fling trainer(Game:%s):\n", steamApp.GameName)
+	fmt.Printf("  Proton:%s\n", protonPath)
+	fmt.Printf("  WinePrefix:%s\n", steamApp.PfxPath)
+	fmt.Printf("  FlingTrainer:%s\n", flingExePath)
 	// 异步执行命令
 	cmd := exec.Command("sh", "-c", commandString)
 	cmd.Start()
@@ -433,17 +436,17 @@ func main() {
 	InitFLiNG()
 	steamApp, err := GetSteamAppsPath(*appid)
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
 	if err != nil {
-		panic(err)
+		fmt.Println(err)
 	}
 	downErr := DownOrUpdateFling(steamApp, *isReDown)
 	if downErr != nil {
-		panic(downErr)
+		fmt.Println(err)
 	}
 	runErr := RunFling(steamApp)
 	if runErr != nil {
-		panic(runErr)
+		fmt.Println(err)
 	}
 }

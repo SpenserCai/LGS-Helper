@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 17:53:47
  * @version:
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-01-31 22:42:33
+ * @LastEditTime: 2023-02-01 21:21:53
  * @Description: file content
  */
 package main
@@ -11,7 +11,6 @@ package main
 import (
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 	"os/exec"
 	"strings"
@@ -137,7 +136,7 @@ func UnLockEaGameDlc(steamApp SteamApp) error {
 func GetGeProtonPath(steamApp SteamApp) (string, error) {
 	steamdataPath := strings.Split(steamApp.pfxPath, "/pfx")[0]
 	// 读取steamdataPath+"/config_info"文件
-	configInfo, err := ioutil.ReadFile(steamdataPath + "/config_info")
+	configInfo, err := os.ReadFile(steamdataPath + "/config_info")
 	if err != nil {
 		return "", err
 	}
@@ -172,7 +171,7 @@ func UpdataWineCfg(steamApp SteamApp) error {
 func UpdataDllOverrides(steamApp SteamApp) error {
 	// TODO:通过修改该[Software\\Wine\\DllOverrides]下的"version"="native,builtin"来实现
 	// 读取steamApp.pfxPath+"/user.reg"文件
-	userReg, err := ioutil.ReadFile(steamApp.pfxPath + "/user.reg")
+	userReg, err := os.ReadFile(steamApp.pfxPath + "/user.reg")
 	if err != nil {
 		return err
 	}
@@ -210,7 +209,7 @@ func UpdataDllOverrides(steamApp SteamApp) error {
 		userRegStringArray = append(userRegStringArray[:dllOverridesEndLine-1], append([]string{versionSet}, userRegStringArray[dllOverridesEndLine-1:]...)...)
 		userRegString := strings.Join(userRegStringArray, "\n")
 		// 写入steamApp.pfxPath+"/user.reg.local"文件
-		err := ioutil.WriteFile(steamApp.pfxPath+"/user.reg", []byte(userRegString), 0644)
+		err := os.WriteFile(steamApp.pfxPath+"/user.reg", []byte(userRegString), 0644)
 		if err != nil {
 			return err
 		}
