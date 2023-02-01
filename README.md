@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 17:53:03
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 21:08:45
+ * @LastEditTime: 2023-02-01 21:50:35
  * @Description: file content
 -->
 <div align="center">
@@ -35,6 +35,25 @@ chmod +x build.sh
 sh ./build.sh
 ```
 then you will get the binary file in the `release` directory.
+
+# Usage
+
+## Use EA DLC UnLocker V2 - Linux
+
+```bash
+cd release/scripts/EA
+chmod +x ./EaUnLockerV2
+./EaUnLockerV2
+```
+
+## Use FLiNGLauncher
+
+```bash
+cd release/scripts/FLiNGLauncher
+chmod +x ./FLiNGLauncher
+# Run Monster Hunter Rise Trainer,if you want force redownload the trainer,add -redown
+./FLiNGLauncher -appid 1446780 
+```
 
 # Other Game
 If you have any localizations of games that unlock need to run on Linux or SteamDeck, feel free to file an issue!
