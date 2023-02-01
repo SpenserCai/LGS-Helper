@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 17:53:03
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 21:50:35
+ * @LastEditTime: 2023-02-01 21:54:41
  * @Description: file content
 -->
 <div align="center">
@@ -37,7 +37,12 @@ sh ./build.sh
 then you will get the binary file in the `release` directory.
 
 # Usage
-
+## Clone Project
+If you haven't got the project yet, you can get it through the following command and switch to the project directory:
+```bash
+git clone https:://github.com/SpenserCai/LGS-Helper.git
+cd LGS-Helper
+```
 ## Use EA DLC UnLocker V2 - Linux
 
 ```bash
