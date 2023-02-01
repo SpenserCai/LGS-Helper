@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 17:53:03
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 11:21:51
+ * @LastEditTime: 2023-02-01 19:12:12
  * @Description: file content
 -->
 <div align="center">
@@ -23,7 +23,8 @@ LGS-Helper(Linux Game Script) A game tool under Linux written in Golang, designe
 
   |                         Script                                       |                            Detail                         |
   | :------------------------------------------------------------------: | :-------------------------------------------------------: |
-  |  <a href="./scripts/EA">EA DLC UnLocker V2 - Linux</a>  |                 Unocker EA DLC on Linux                   |
+  |  <a href="./scripts/EA">EA DLC UnLocker V2 - Linux</a>               |                 Unocker EA DLC on Linux                   |
+  |  <a href="./scripts/FLiNGLauncher">FLiNGLauncher</a>                 |                 Fling Trainer on Linux                    |
 
 # Other Game
 If you have any localizations of games that unlock need to run on Linux or SteamDeck, feel free to file an issue!
