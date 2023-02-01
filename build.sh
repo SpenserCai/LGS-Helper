@@ -4,9 +4,14 @@
  # @Date: 2023-02-01 20:53:40
  # @version: 
  # @LastEditors: SpenserCai
- # @LastEditTime: 2023-02-01 20:59:10
+ # @LastEditTime: 2023-02-01 21:03:41
  # @Description: file content
 ### 
+# 判断当前目录是否是LGS-Helper，如果不是则退出，防止误操作，通过pwd命令获取当前目录，匹配最后一个/后的字符串
+if [ `pwd | awk -F '/' '{print $NF}'` != "LGS-Helper" ]; then
+    echo "当前目录不是LGS-Helper，请切换到LGS-Helper目录下执行"
+    exit
+fi
 rm -rf release/
 # 创建release目录
 mkdir release
@@ -19,7 +24,7 @@ for dir in `ls release/scripts`; do
         cd release/scripts/$dir
         go mod tidy
         go build
-        rm -rf go.mod go.sum main.go
+        rm -rf go.mod go.sum *.go *.md
         cd ../../../
     fi
 done
