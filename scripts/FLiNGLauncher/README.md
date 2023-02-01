@@ -3,7 +3,7 @@
  * @Date: 2023-02-01 10:28:50
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 10:36:28
+ * @LastEditTime: 2023-02-01 11:25:07
  * @Description: file content
 -->
 <div align="center">
@@ -11,8 +11,9 @@
 # FLiNGLauncher
 
 <img src="https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white" />
-<img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white" />
 <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" /> 
+<img src="https://img.shields.io/badge/Steam-000000?style=for-the-badge&logo=steam&logoColor=white" />
+<img src="https://img.shields.io/badge/Epic%20Games-313131?style=for-the-badge&logo=Epic%20Games&logoColor=white" />
 
 
 <!-- prettier-ignore-start -->
