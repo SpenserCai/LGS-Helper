@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 23:51:56
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 11:33:09
+ * @LastEditTime: 2023-02-01 21:12:46
  * @Description: file content
 -->
 <div align="center">
@@ -44,7 +44,7 @@ https://github.com/GloriousEggroll/proton-ge-custom
 ## 4.解锁DLC
 ```bash
 git clone https://github.com/SpenserCai/LGS-Helper.git
-cd LGS-Helper/scripts/EA
+cd LGS-Helper/release/scripts/EA
 chmod +x EAUnLockV2
 ./EAUnLockV2
 ```

@@ -3,7 +3,7 @@
  * @Date: 2023-02-01 10:28:50
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 19:10:02
+ * @LastEditTime: 2023-02-01 21:12:07
  * @Description: file content
 -->
 <div align="center">
@@ -37,7 +37,7 @@
 我已经为大家编译好了可执行文件，你可以直接使用，当然也能自行编译。
 ```bash
 git clone https://github.com/SpenserCai/LGS-Helper.git
-cd LGS-Helper/scripts/FLiNGLauncher
+cd LGS-Helper/release/scripts/FLiNGLauncher
 chmod +x ./FLiNGLauncher
 ./FLiNGLauncher -appid Steam游戏ID
 ```

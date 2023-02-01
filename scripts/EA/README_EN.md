@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 23:51:56
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 11:33:20
+ * @LastEditTime: 2023-02-01 21:12:38
  * @Description: file content
 -->
 <div align="center">
@@ -43,7 +43,7 @@ Run The Sim4 once and give the villain a home, then save and exit
 ## 4.UnLock DLC
 ```bash
 git clone https://github.com/SpenserCai/LGS-Helper.git
-cd LGS-Helper/scripts/EA
+cd LGS-Helper/release/scripts/EA
 chmod +x EAUnLockV2
 ./EAUnLockV2
 ```
