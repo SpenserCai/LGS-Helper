@@ -3,7 +3,7 @@
  * @Date: 2023-02-01 10:29:02
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 23:02:10
+ * @LastEditTime: 2023-02-01 23:04:59
  * @Description: file content
 -->
 <div align="center">
@@ -24,7 +24,7 @@ FLiNGLauncher for Linux distributions, supports running Luna on SteamDeck and Li
 </div>
 
 <p align="center">
-  <a href="./README_EN.md">English</a>
+  <a href="./README.md">中文</a>
 </p>
 
 ## 1.Foreword
