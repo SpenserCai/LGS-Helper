@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 23:51:56
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 21:12:38
+ * @LastEditTime: 2023-02-02 13:44:59
  * @Description: file content
 -->
 <div align="center">
@@ -17,6 +17,7 @@
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable-next-line MD036 -->
 Developed based on the original <a  href="https://sims.tarac.nl/the-sims-4/the-sims-4-free-downloads/add-pirated-dlcs-to-your-legit-the-sims-4-game/">EA DLC UnLocker V2</a>, it realizes the function of unlocking EA game DLC on Linux, and will continue to optimize and integrate it later.
+The original technology comes from <a href="https://github.com/acidicoala/Koalageddon">Koalageddon</a>
 <!-- prettier-ignore-end -->
 
 </div>
