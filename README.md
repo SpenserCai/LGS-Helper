@@ -14,7 +14,7 @@
 <a href="https://jq.qq.com/?_wv=1027&k=htcRNUvM">
     <img src="https://img.shields.io/badge/QQ%E7%BE%A4-246554357-blueviolet?style=flat-square" alt="QQ Chat Group">
 </a>
-<img alt="GitHub all releases" src="https://img.shields.io/github/downloads/SpenserCai/LGS-Helper/total">
+<img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/SpenserCai/LGS-Helper?style=social">
 <a href="https://discord.gg/3P7K6EzYRW">
     <img src="https://discordapp.com/api/guilds/1070553912156885203/widget.png?style=shield" alt="Discord Server">
 </a>
