@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 17:53:03
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-02 12:08:52
+ * @LastEditTime: 2023-02-03 21:51:59
  * @Description: file content
 -->
 <div align="center">
@@ -51,7 +51,7 @@ cd LGS-Helper
 
 ```bash
 cd release/scripts/EA
-chmod +x ./EaUnLockerV2
+chmod +x ./EaUnLockV2
 ./EaUnLockerV2
 ```
 
