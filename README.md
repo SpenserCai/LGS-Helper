@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 17:53:03
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-03 21:51:59
+ * @LastEditTime: 2023-02-04 00:02:52
  * @Description: file content
 -->
 <div align="center">
@@ -71,3 +71,11 @@ Game name: xxxx
 Type: Localized/Unlocked etc.
 How to use it on win: https://xxxx
 ```
+
+# 赞助项目
+如果你觉得这个项目对你有帮助，可以通过以下方式赞助我，让我有动力继续维护这个项目。
+
+|                         微信                         |
+| :--------------------------------------------------: |
+| <img src="./img/dashang.jpeg" width="200" height="200" alt="微信赞助" /> |
+
