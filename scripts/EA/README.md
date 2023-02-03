@@ -47,7 +47,7 @@ https://github.com/GloriousEggroll/proton-ge-custom
 git clone https://github.com/SpenserCai/LGS-Helper.git
 cd LGS-Helper/release/scripts/EA
 chmod +x ./EaUnLockV2
-./EAUnLockV2
+./EaUnLockV2
 ```
 
 ## 5.配置wine
