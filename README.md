@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 17:53:03
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-04 00:13:21
+ * @LastEditTime: 2023-02-04 00:16:11
  * @Description: file content
 -->
 <div align="center">
@@ -77,5 +77,5 @@ How to use it on win: https://xxxx
 
 |                         微信                         |
 | :--------------------------------------------------: |
-| [![cgi-bin-mmwebwx-bin-webwxgetmsgimg-Msg-ID-8386734141223849069-skey-crypt-b9ad3149-445c263e08efc63.jpg](https://i.postimg.cc/xjpDTjkq/cgi-bin-mmwebwx-bin-webwxgetmsgimg-Msg-ID-8386734141223849069-skey-crypt-b9ad3149-445c263e08efc63.jpg)](https://postimg.cc/14FYvQrZ) |
+| <img src="img/dashang.jpeg" width="200" height="200" alt="微信赞助" /> |
 
