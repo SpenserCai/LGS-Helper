@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 17:53:03
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-04 01:14:03
+ * @LastEditTime: 2023-02-04 01:18:24
  * @Description: file content
 -->
 <div align="center">
@@ -75,7 +75,7 @@ How to use it on win: https://xxxx
 # 赞助项目
 如果你觉得这个项目对你有帮助，可以通过以下方式赞助我，让我有动力继续维护这个项目。
 
-|                         微信                         |
-| :--------------------------------------------------: |
-| <img src="img/dashang.jpeg" width="250" height="250" alt="微信赞助" /> |
+|                           微信                                         |                             USDT(ETH)                           |
+| :-------------------------------------------------------------------: | :--------------------------------------------------------------: |
+| <img src="img/dashang.jpeg" width="250" height="250" alt="微信赞助" /> |           0xf33a3342558099DCD3C136cA6829B880d4933797             |
 
