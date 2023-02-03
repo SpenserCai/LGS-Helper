@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 17:53:03
  * @version: 
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-04 00:02:52
+ * @LastEditTime: 2023-02-04 00:09:15
  * @Description: file content
 -->
 <div align="center">
@@ -77,5 +77,5 @@ How to use it on win: https://xxxx
 
 |                         微信                         |
 | :--------------------------------------------------: |
-| <img src="./img/dashang.jpeg" width="200" height="200" alt="微信赞助" /> |
+| <img src="img/dashang.jpeg" width="200" height="200" alt="微信赞助" /> |
 
