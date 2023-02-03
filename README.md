@@ -77,5 +77,5 @@ How to use it on win: https://xxxx
 
 |                         微信                         |
 | :--------------------------------------------------: |
-| <img src="img/dashang.jpeg" width="350" height="350" alt="微信赞助" /> |
+| <img src="img/dashang.jpeg" width="300" height="300" alt="微信赞助" /> |
 
