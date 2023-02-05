@@ -3,7 +3,7 @@
  * @Date: 2023-01-30 17:53:47
  * @version:
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-01 21:21:53
+ * @LastEditTime: 2023-02-05 10:39:04
  * @Description: file content
  */
 package main
@@ -71,7 +71,20 @@ func GetSteamAppsPath(appid string, gameName string) (SteamApp, error) {
 						return steamApp, err
 					}
 					steamApp.GamePath = tmpGamePath
-					steamApp.pfxPath = value.(map[string]interface{})["path"].(string) + "/steamapps/compatdata/" + appid + "/pfx"
+					tmpPfxPath := value.(map[string]interface{})["path"].(string) + "/steamapps/compatdata/" + appid + "/pfx"
+					// 判断pfxPath目录是否存在
+					if _, err := os.Stat(tmpPfxPath); err != nil {
+						for _, localPath := range steamPath {
+							tmpPfxPath = homePath + "/" + localPath + "/steamapps/compatdata/" + appid + "/pfx"
+							if _, err := os.Stat(tmpPfxPath); err == nil {
+								steamApp.pfxPath = tmpPfxPath
+								break
+							}
+						}
+					} else {
+						steamApp.pfxPath = tmpPfxPath
+					}
+					steamApp.pfxPath = tmpPfxPath
 					return steamApp, nil
 				}
 			}
