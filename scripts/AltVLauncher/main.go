@@ -3,7 +3,7 @@
  * @Date: 2023-02-02 11:55:11
  * @version:
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-06 14:01:32
+ * @LastEditTime: 2023-02-06 14:51:24
  * @Description: file content
  */
 package main
@@ -16,9 +16,9 @@ import (
 
 // atlv download:https://cdn.altv.mp/launcher/release/x64_win32/altv.zip
 func main() {
-	v := lgscore.SteamApp{
+	gtavApp := lgscore.SteamApp{
 		AppId: "271590",
 	}
-	v.InitSteamApp()
-	fmt.Println(v)
+	gtavApp.InitSteamApp()
+	fmt.Println(gtavApp)
 }

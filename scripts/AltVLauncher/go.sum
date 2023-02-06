@@ -1,5 +1,5 @@
-github.com/SpenserCai/lgscore v0.0.2 h1:VZs2UKp4+i9Dp7cAsMixBB61itCYqT4k+ny/V4SHKGE=
-github.com/SpenserCai/lgscore v0.0.2/go.mod h1:xaB8WuCSxgMH5nTFDVt33mZViq80OyR1teFUvTmYFg4=
+github.com/SpenserCai/lgscore v0.0.3 h1:N/Qh99gRcUQ3Iy3pm6InbMAzInGF0ltGyrFQYK/xNy4=
+github.com/SpenserCai/lgscore v0.0.3/go.mod h1:xaB8WuCSxgMH5nTFDVt33mZViq80OyR1teFUvTmYFg4=
 github.com/andygrunwald/vdf v1.1.0 h1:gmstp0R7DOepIZvWoSJY97ix7QOrsxpGPU6KusKXqvw=
 github.com/andygrunwald/vdf v1.1.0/go.mod h1:f31AAs7HOKvs5B167iwLHwKuqKc4bE46Vdt7xQogA0o=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
