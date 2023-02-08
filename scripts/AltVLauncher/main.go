@@ -3,7 +3,7 @@
  * @Date: 2023-02-02 11:55:11
  * @version:
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-06 22:35:39
+ * @LastEditTime: 2023-02-08 17:49:10
  * @Description: file content
  */
 package main
@@ -170,7 +170,7 @@ func LaunchAltv(steamApp lgscore.SteamApp) {
 	runGtaCmd := exec.Command("sh", "-c", "steam steam://rungameid/271590")
 	runGtaCmd.Run()
 	// 等待10秒
-	time.Sleep(10 * time.Second)
+	time.Sleep(15 * time.Second)
 	runAltvCmd := exec.Command("sh", "-c", commandString)
 	runAltvCmd.Dir = AltvPath
 	runAltvCmd.Start()
