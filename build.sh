@@ -4,7 +4,7 @@
  # @Date: 2023-02-01 20:53:40
  # @version: 
  # @LastEditors: SpenserCai
- # @LastEditTime: 2023-02-01 21:03:41
+ # @LastEditTime: 2023-02-11 15:30:00
  # @Description: file content
 ### 
 # 判断当前目录是否是LGS-Helper，如果不是则退出，防止误操作，通过pwd命令获取当前目录，匹配最后一个/后的字符串

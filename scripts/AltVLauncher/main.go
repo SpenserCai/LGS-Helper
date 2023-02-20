@@ -3,7 +3,7 @@
  * @Date: 2023-02-02 11:55:11
  * @version:
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-08 17:49:10
+ * @LastEditTime: 2023-02-11 15:51:01
  * @Description: file content
  */
 package main
@@ -108,14 +108,15 @@ func FirstRunAltvCheck(cmd *exec.Cmd) {
 }
 
 func GetRunAltvCommand(steamApp lgscore.SteamApp) string {
-	commandString := fmt.Sprintf("STEAM_COMPAT_CLIENT_INSTALL_PATH=\"%s\" STEAM_COMPAT_DATA_PATH=\"%s\" WINEPREFIX=\"%s\" \"%s\" run \"%s\"",
+	commandString := fmt.Sprintf("STEAM_COMPAT_CLIENT_INSTALL_PATH=\"%s\" STEAM_COMPAT_DATA_PATH=\"%s\" WINEPREFIX=\"%s\" \"%s\" run \"%s\" \"-noupdate\"",
 		strings.Split(steamApp.Game.GameInstallPath, "/steamapps")[0],
 		strings.Split(steamApp.PfxPath, "/pfx")[0], steamApp.PfxPath,
 		steamApp.ProtonPath, AltvPath+"/altv.exe")
+	println(commandString)
 	return commandString
 }
 
-func FirstRunAltv(steamApp lgscore.SteamApp) error {
+func FirstRunAltv(steamApp lgscore.SteamApp, version string) error {
 	// 检查是否第一次运行
 	if _, err := os.Stat(AltvPath + "/lgcaltv.lock"); os.IsNotExist(err) {
 		// 向altv.toml写入“branch = 'release'”，如果没有则创建
@@ -131,7 +132,7 @@ func FirstRunAltv(steamApp lgscore.SteamApp) error {
 		if err != nil {
 			return err
 		}
-		_, err = altvTomlFile.WriteString("branch = 'release'\n")
+		_, err = altvTomlFile.WriteString("branch = '" + version + "'\n")
 		if err != nil {
 			return err
 		}
@@ -156,6 +157,22 @@ func FirstRunAltv(steamApp lgscore.SteamApp) error {
 		setLinkCmd := exec.Command("sh", "-c", "ln -s ../libs/chrome_elf.dll . &&  ln -s ../libs/icudtl.dat . &&  ln -s ../libs/libce2.dll . &&  ln -s ../libs/snapshot_blob.bin . &&  ln -s ../libs/v8_context_snapshot.bin .")
 		setLinkCmd.Dir = AltvPath + "/cef"
 		setLinkCmd.Run()
+		// AltPath/cef/目录下的altv-webengine.exe重命名为altv-webengine.old.exe
+		altvWebengineOld := AltvPath + "/cef/altv-webengine.old.exe"
+		if _, err := os.Stat(altvWebengineOld); os.IsNotExist(err) {
+			altvWebengine := AltvPath + "/cef/altv-webengine.exe"
+			if _, err := os.Stat(altvWebengine); !os.IsNotExist(err) {
+				os.Rename(altvWebengine, altvWebengineOld)
+			}
+		}
+		// 将altv-webengine/altv-webengine.exe复制到AltPath/cef/目录下并重命名为altv-webengine.exe
+		altvWebengine := AltvPath + "/cef/altv-webengine.exe"
+		if _, err := os.Stat(altvWebengine); os.IsNotExist(err) {
+			altvWebengineNew := "./altv-webengine/altv-webengine.exe"
+			if _, err := os.Stat(altvWebengineNew); !os.IsNotExist(err) {
+				new(lgsutils.FileLGS).CopyFile(altvWebengineNew, altvWebengine)
+			}
+		}
 		//创建锁文件
 		_, createLockErr := os.Create(AltvPath + "/lgcaltv.lock")
 		if createLockErr != nil {
@@ -169,8 +186,23 @@ func LaunchAltv(steamApp lgscore.SteamApp) {
 	commandString := GetRunAltvCommand(steamApp)
 	runGtaCmd := exec.Command("sh", "-c", "steam steam://rungameid/271590")
 	runGtaCmd.Run()
-	// 等待10秒
-	time.Sleep(15 * time.Second)
+	time.Sleep(10 * time.Second)
+	for {
+		// 检测是否存在包含PlayGTAV.exe的进程
+		// ps -ef | grep PlayGTAV.exe | grep -v grep | awk '{print $2}'
+		psCmd := exec.Command("sh", "-c", "ps -ef | grep PlayGTAV.exe | grep -v grep | awk '{print $2}'")
+		// 一次性读取所有输出
+		psOut, _ := psCmd.Output()
+		// 将[]byte转换为string
+		psOutString := string(psOut)
+		// 将string转换为[]string
+		psOutStringList := strings.Split(psOutString, "\n")
+		// 如果有进程则跳出循环
+		if len(psOutStringList) > 1 {
+			break
+		}
+		time.Sleep(1 * time.Second)
+	}
 	runAltvCmd := exec.Command("sh", "-c", commandString)
 	runAltvCmd.Dir = AltvPath
 	runAltvCmd.Start()
@@ -178,13 +210,19 @@ func LaunchAltv(steamApp lgscore.SteamApp) {
 
 // atlv download:https://cdn.altv.mp/launcher/release/x64_win32/altv.zip
 func main() {
+	// 获取第一个参数version如果没有则默认为release
+	version := "release"
+	if len(os.Args) > 1 {
+		version = os.Args[1]
+	}
+	println("version:" + version)
 	gtavApp := lgscore.SteamApp{
 		AppId: "271590",
 	}
 	gtavApp.InitSteamApp()
 	fmt.Println(gtavApp)
 	InitAltV()
-	err := FirstRunAltv(gtavApp)
+	err := FirstRunAltv(gtavApp, version)
 	if err != nil {
 		fmt.Println(err)
 	}
