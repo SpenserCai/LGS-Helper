@@ -3,7 +3,7 @@
  * @Date: 2023-02-11 00:14:10
  * @version:
  * @LastEditors: SpenserCai
- * @LastEditTime: 2023-02-11 15:46:19
+ * @LastEditTime: 2023-02-11 21:44:06
  * @Description: file content
  */
 package main
@@ -31,9 +31,16 @@ func getArgs() string {
 }
 
 func main() {
-	args := getArgs() + " --in-process-gpu"
+	args := getArgs() + "--in-process-gpu --use-gl=swiftshader"
+	// 将args写入到当前目录的上级目录的log.txt中
+	// f, err := os.OpenFile(getCurrentPath()+"\\..\\log.txt", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	// if err != nil {
+	// 	panic(err)
+	// }
+	// defer f.Close()
+	// f.WriteString(args)
 	cmd := exec.Command(getCurrentPath()+"\\altv-webengine.old.exe", args)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
-	cmd.Run()
+	cmd.Start()
 }
