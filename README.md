@@ -44,7 +44,7 @@ then you will get the binary file in the `release` directory.
 ## Clone Project
 If you haven't got the project yet, you can get it through the following command and switch to the project directory:
 ```bash
-git clone https:://github.com/SpenserCai/LGS-Helper.git
+git clone https://github.com/SpenserCai/LGS-Helper.git
 cd LGS-Helper
 ```
 ## Use EA DLC UnLocker V2 - Linux
