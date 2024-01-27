@@ -1,10 +1,10 @@
 EA DLC Unlocker v2 - DLC unlocker for Origin and EA Desktop
 made by anadius
 
-Website: https://anadius.hermietkreeft.site/
-Discord: https://anadius.hermietkreeft.site/discord
+Website: https://anadius.su/
+Discord: https://anadius.su/discord
 CS RIN thread: https://cs.rin.ru/forum/viewtopic.php?f=20&t=104412
-Donate: https://anadius.hermietkreeft.site/donate
+Donate: https://anadius.su/donate
 
 ==========================
 Installation instructions:
@@ -18,7 +18,18 @@ Installation instructions:
    If this happens reinstall Origin and run the script again or use the manual
    installation instructions below.
 3. Select "Add/Update game config" and select the game.
-4. Download DLC files if needed - see the links in the CS RIN thread.
+4. Download DLC files if needed - links are on my website and in CS RIN thread.
+   (Special note for Sims players - YES, you need the DLC files. DLC Unlocker
+   doesn't download anything.)
+
+If your DLCs suddenly stop working - it's because EA app updated and removed the
+DLC Unlocker. So simply install it again.
+
+On Linux the only difference is that you run "setup_linux.sh" (double click on
+it - if that doesn't work run it from the terminal) and if you have multiple
+wine/proton prefixes with EA app installed - you select which one to use.
+Then you get the same menu as on Windows, so follow the instructions above
+from the second step forwrads.
 
 ============================
 Uninstallation instructions:
@@ -54,7 +65,7 @@ Manual installation instructions:
      - if you're using Wine or if you deleted the shortcut
        the default install locations are:
          * Origin: "C:\Program Files (x86)\Origin"
-         * EA Desktop: "C:\Program Files\Electronic Arts\EA Desktop"
+         * EA Desktop: "C:\Program Files\Electronic Arts\EA Desktop\EA Desktop"
 3. Copy the correct "version.dll" to the folder you opened in the previous step.
    If you use Origin copy it from "origin" folder.
    If you use EA Desktop copy it from "ea_desktop" folder.
@@ -63,23 +74,15 @@ Manual installation instructions:
    "C:\Users\<your username>\AppData\Roaming\anadius\EA DLC Unlocker v2"
 5. Copy "config.ini" and any game config you want to the folder opened
    in the previous step.
+6. (EA Desktop only) Open command prompt as administrator and type:
+
+   schtasks /Create /F /RL HIGHEST /SC ONCE /ST 00:00 /SD 01/01/2000 /TN copy_dlc_unlocker /TR "xcopy.exe /Y 'C:\Program Files\Electronic Arts\EA Desktop\EA Desktop\version.dll' 'C:\Program Files\Electronic Arts\EA Desktop\StagedEADesktop\EA Desktop\*'"
+
+   If you get some error message change 01/01/2000 to 2000/01/01
 
 And that's it, you have Unlocker v2 installed. If you want to uninstall it 
 just delete that "version.dll" file and then delete
 "C:\Users\<your username>\AppData\Roaming\anadius\EA DLC Unlocker v2" and
 "C:\Users\<your username>\AppData\Local\anadius\EA DLC Unlocker v2" folders.
-
-===============================
-Additional info for Wine users:
-===============================
-I doubt you can run the setup script through Wine so use the manual
-installation instructions above. Then try if the Unlocker works
-(start the game, test if DLCs are unlocked). If it does - great!
-If it doesn't follow these instructions:
-1. Open "winecfg".
-2. Open "Libraries" tab.
-3. Select "version" and click "Add".
-4. Select it on "Existing overrides" list and click "Edit".
-5. Select "Native then Builtin" and press "OK".
-6. Press OK.
-Now the Unlocker should work.
+If you followed the 6th step above open command prompt as administrator and run:
+schtasks /Delete /TN copy_dlc_unlocker /F
