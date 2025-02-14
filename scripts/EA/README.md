@@ -20,7 +20,7 @@
 基于原始的<a  href="https://sims.tarac.nl/the-sims-4/the-sims-4-free-downloads/add-pirated-dlcs-to-your-legit-the-sims-4-game/">EA DLC UnLocker V2</a>开发，在Linux实现了解锁EA游戏DLC的功能，后期还会继续优化和集成。
 原始技术来源于<a href="https://github.com/acidicoala/Koalageddon">Koalageddon</a>
 
-谨此献给：Ayi
+～～谨此献给：Ayi～～
 <!-- prettier-ignore-end -->
 
 </div>
